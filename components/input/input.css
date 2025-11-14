@@ -1,0 +1,7 @@
+
+._input__field {
+    width: 400px;
+    height: 48px;
+    border-radius: var(--input-radius);
+    box-shadow: var(--box-shadow);
+}

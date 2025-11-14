@@ -1,12 +1,8 @@
 :root{
---bg: #f5f7f8;
---signup-signin-card-bg: #FFFFFF;
-}
-
-body{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: var(--bg);
-    min-height: screen-height;
+--bg: #F7F9FA;
+--black: #141B2B;
+--text: #EAEBED;
+--box-sizing: border-box;
+--input-radius:12px;
+--box-shadow: #F3F4F6;
 }
