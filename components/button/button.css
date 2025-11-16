@@ -1,0 +1,6 @@
+._button{
+    width: 196px;
+    height: 48px;
+    border-radius: var(--input-radius);
+    border: none;
+}

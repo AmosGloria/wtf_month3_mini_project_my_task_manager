@@ -2,6 +2,7 @@
 ._input__field {
     width: 400px;
     height: 48px;
+    border:1px solid #F3F4F6;
     border-radius: var(--input-radius);
     box-shadow: var(--box-shadow);
 }
