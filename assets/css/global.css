@@ -8,3 +8,9 @@
 --text:#9EA3AC;
 --black-text:#101828;
 }
+
+.main-container{
+    max-width:full;
+    height: auto;;
+    background-color: var(--bg);
+}
