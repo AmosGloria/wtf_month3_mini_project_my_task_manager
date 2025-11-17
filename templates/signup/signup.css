@@ -1,5 +1,11 @@
 .form{
     width: 400px;
-    height: 418px;
+    height: 368px;
     background-color: var(--white);
+    bottom: 0;
+    position: relative;
+}
+
+.button{
+    display: flex;
 }

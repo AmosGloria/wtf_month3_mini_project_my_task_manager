@@ -4,6 +4,7 @@
 --text: #EAEBED;
 --box-sizing: border-box;
 --input-radius:12px;
+--card-radius:16px;
 --box-shadow: #F3F4F6;
 --text:#9EA3AC;
 --black-text:#101828;
@@ -17,6 +18,8 @@
     align-items:center;
     justify-items: center;
     padding: 4px;
-    overflow: hidden;
+    /* establish a containing block for absolutely positioned children */
+    position: relative;
+    overflow: visible;
     background-image: linear-gradient(to bottom right, #f9fafb, #f3f4f6);
 }

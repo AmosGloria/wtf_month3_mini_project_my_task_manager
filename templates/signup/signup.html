@@ -1,17 +1,20 @@
     <link rel="stylesheet" href="/templates/signup/signup.css"/>
 
     <form class="form">
-          <label for="">Full Name</label>
+          <label for="" class="form__label">Full Name</label>
         <span data-import="components\input\input.html">         
           </span>
-        <label for="">Enter your Email</label>
-        <span data-import="components\input\input.html" data-placeholder="John Doe">
+        <label for=""class="form__label">Enter your Email</label>
+        <span data-import="components\input\input.html" data-placeholder="John Doe" class="form__email">
         </span>
-           <label for="">Password</label>
-        <span data-import="components\input\input.html" data-placeholder="John Doe">         
+           <label for="" class="form__label">Password</label>
+        <span data-import="components\input\input.html" class="form__password">         
           </span>
           <p>password must be at least 6 characters long</p>
-          <div data-import="/components/button/button.html">Help</div>
-         <div data-import="/components/button/button.html">Create Account</div>
+          <div class="button">
+             <div data-import="/components/button/button.html" class="button__help" >Help</div>
+             <div data-import="/components/button/button.html" class="button--create">Create Account</div>
+          </div>
+     
 
     </form>

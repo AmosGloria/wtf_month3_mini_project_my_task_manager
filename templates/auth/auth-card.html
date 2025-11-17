@@ -1,3 +1,12 @@
 <link rel="stylesheet" href="templates/auth/auth-card.css"/>
 
-<div data-import="templates/signup/signup.html" class="auth"></div>
+<div class="auth">
+	<div data-import="templates\header\header.html"></div>
+    <span data-import="components/button/button.html">
+        {{Login}}
+    </span>
+    <span data-import="components/button/button.html">
+        {{Signup}}
+    </span>
+	<div data-import="templates/signup/signup.html" class="auth-signup"></div>
+</div>
