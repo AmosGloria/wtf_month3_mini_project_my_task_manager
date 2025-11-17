@@ -11,12 +11,13 @@ function loadStyles() {
   document.head.appendChild(link);
 }
 
-document.addEventListener('DOMContentLoaded', function () {
+
   loadStyles();
 
   const componentElements = document.querySelectorAll('[data-import]');
 
-  for (const element of componentElements) {
+function renderComponents(componentElements){
+    for (const element of componentElements) {
     const fileImport = element.getAttribute('data-import');
 
     fetch(fileImport)
@@ -31,13 +32,22 @@ document.addEventListener('DOMContentLoaded', function () {
 
         const rendered = renderTemplate(component, data);
         element.innerHTML = rendered;
+        loadComponentScripts(element);
+
+        const getAttributes=element.querySelectorAll('[data-import]');
+        renderComponents(getAttributes)
       })
       .catch((err) => {
         console.error(`Error loading component from ${fileImport}:`, err);
       });
   }
 
-  const components = ['bubbles', 'button', 'card'];
+}
+
+renderComponents(componentElements)
+
+function loadComponentScripts(){
+   const components = ['bubbles', 'button', 'card'];
   const templates = ['header', 'footer'];
 
   components.forEach((component) => {
@@ -59,4 +69,7 @@ document.addEventListener('DOMContentLoaded', function () {
         console.error(`Error loading ${template} template:`, err);
       });
   });
-});
+
+
+}
+ 
