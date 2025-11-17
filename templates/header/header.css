@@ -1,9 +1,28 @@
 .header{
     width: 100%;
     height: 226px;
-    margin: 0;
+    margin: 0 auto;
     box-sizing: border-box;
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    position: relative;
+    top: 80px;
 }
 
-.header__logo{}
+.header__logo{
+    display: flex;
+    justify-content: center;
+}
+
+.header__heading{
+    color:var(--black);
+    font-size: 30px;
+}
+
+.header-login__heading{
+    color:var(--black);
+    font-size: 30px;
+}

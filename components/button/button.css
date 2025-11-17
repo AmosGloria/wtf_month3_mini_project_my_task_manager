@@ -3,4 +3,5 @@
     height: 48px;
     border-radius: var(--input-radius);
     border: none;
+    color: black;
 }
