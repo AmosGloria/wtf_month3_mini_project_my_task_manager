@@ -1,43 +1,72 @@
+@keyframes twinkle {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+        box-shadow: 0 0 10px rgba(245, 181, 86, 0.2), 10px 10px 20px rgba(245, 181, 86, 0.2); /* Scattered shadow with same color as bubble */
+    }
+    50% {
+        opacity: 0.1;
+        transform: scale(1.5);
+        box-shadow: 0 0 50px rgba(241, 170, 64, 0.4), 15px 25px 35px rgba(52, 245, 110, 0.3), -20px -20px 40px rgba(103, 73, 236, 0.3); 
+    }
+}
+
 .bubbles {
-    position: relative; 
     display: grid;
+    grid-template-rows: 20vh 20vh;
     width: 50%; 
     height: 17vh; 
-    opacity: 0.3;
+    opacity: 0.2;
 }
 
 .bubbles .bubble {
-    background-color: rgb(245, 181, 86);
-    width: 60px;
-    height: 60px;
+    background-color: rgb(245, 181, 86); 
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     display: inline-block;
     position: absolute; 
+    right: 6%;
+    top: 10%;
+    animation: twinkle 2s ease-in-out infinite;
 }
 
 .bubbles.bubbles--second .bubble {
-    background-color: green;
-    top: 50%; 
-    left: 50%; 
-    transform: translate(-50%, -50%); 
+    background-color: rgb(5, 133, 5); 
+    top: 70%; 
+    left: 14%; 
+    transform: translate(-50%, -50%);
+    animation: twinkle 2s ease-in-out infinite;
+    box-shadow: 0 0 5px rgba(2, 61, 2), 10px 10px 20px rgba(2, 61, 2, 0.2); 
 }
 
 .bubbles.bubbles--third .bubble {
-    background-color: blue;
-    top: 0; 
-    right: 0; 
+    background-color: rgb(3, 3, 131); 
+    top: 30%; 
+    left: 8%;
+    animation: twinkle 2s ease-in-out infinite;
+    box-shadow: 0 0 5px rgb(97, 97, 230), 10px 10px 20px rgba(3, 3, 131, 0.2); 
 }
 
 .bubbles.bubbles--fourth .bubble {
-    top: 10%;
-    left: 15%;
-    background-color: #F3F4F6;
+    top: 70%;
+    right: 8%;
+    background-color: #F3F4F6; 
     border: 3px solid rgb(245, 181, 86);
+    position: absolute;
+    width: 4rem;
+    height: 4rem;
+    animation: none;
+    box-shadow: 0 0 5px rgba(243, 244, 246, 0.2), 10px 10px 20px rgba(243, 244, 246, 0.2); /* Matching color for box-shadow */
 }
 
 .bubbles.bubbles--fifth .bubble {
-    bottom: 10%;
-    right: 20%;
-    background-color: #F3F4F6;
-    border: 3px solid blue;
+    bottom: 80%;
+    left: 5%;
+    background-color: #F3F4F6; 
+    border: 3px solid green;
+    width: 3rem;
+    height: 3rem;  
+    animation: none;
+    box-shadow: 0 0 5px rgba(243, 244, 246, 0.2), 10px 10px 20px rgba(243, 244, 246, 0.2); /* Matching color for box-shadow */
 }
