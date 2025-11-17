@@ -10,7 +10,11 @@
 }
 
 .main-container{
-    max-width:full;
-    height: auto;;
-    background-color: var(--bg);
+    height:auto;
+    width: full;
+    align-items:center;
+    justify-items: center;
+    padding: 4px;
+    overflow: hidden;
+    background-image: linear-gradient(to bottom right, #f9fafb, #f3f4f6);
 }
