@@ -3,11 +3,7 @@
     height: 226px;
     margin: 0;
     box-sizing: border-box;
+
 }
 
-.img-container{
-    width: 80px;
-    height: 80px;
-    background-color: #4743F8;
-    border-radius: var(--card-radius);
-}
+.header__logo{}
