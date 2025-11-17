@@ -1,10 +1,14 @@
 <link rel="stylesheet" href="templates/auth/auth-card.css"/>
 
 <div class="auth">
+    <div class="auth__container">
 	<div data-import="templates\header\header.html"></div>
-    <span data-import="components/button/button.html" data-text="Login">
-    </span>
-    <span data-import="components/button/button.html" data-text="Signup">       
-    </span>
-	<div data-import="templates/signup/signup.html" class="auth-signup"></div>
+
+    <div class="auth-actions">
+        <span data-import="components/button/button.html" data-text="Login" class="auth-login__button"></span>
+        <span data-import="components/button/button.html" data-text="Signup" class="auth-signup__button"></span>
+    </div>
+	<div data-import="templates/signup/signup.html" class="auth-signup" class="auth-signup__button"></div>
+    </div>
+	 <div data-import="templates\footer\footer.html" class="footer"></div>
 </div>
