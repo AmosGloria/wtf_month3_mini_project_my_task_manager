@@ -12,14 +12,44 @@
 --white:#FFFFFF;
 }
 
+@keyframes float-up-down {
+    0%, 100% {
+        transform: translateX(-50%);
+    }
+    10% {
+        transform: translateX(-50px);
+    }
+}
+
 .main-container{
-    height:auto;
+    height: 100vh;
     width: full;
     align-items:center;
     justify-items: center;
     padding: 4px;
-    /* establish a containing block for absolutely positioned children */
     position: relative;
     overflow: visible;
     background-image: linear-gradient(to bottom right, #f9fafb, #f3f4f6);
+}
+
+.triangle-decoration{
+    position: fixed;
+    right: 280px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    pointer-events: none;
+    width: 40px;
+    
+}
+
+.cursor-decoration{
+    position: fixed;
+    right: 320px;
+    top: 140px;
+    z-index: 10;
+    pointer-events: none;
+    width: 46px; 
+    rotate: 60deg;
+    animation: float-up-down 1s ease-in-out infinite;
 }

@@ -57,7 +57,7 @@
     width: 4rem;
     height: 4rem;
     animation: none;
-    box-shadow: 0 0 5px rgba(243, 244, 246, 0.2), 10px 10px 20px rgba(243, 244, 246, 0.2); /* Matching color for box-shadow */
+    box-shadow: 0 0 5px rgba(243, 244, 246, 0.2), 10px 10px 20px rgba(243, 244, 246, 0.2); 
 }
 
 .bubbles.bubbles--fifth .bubble {
@@ -70,3 +70,4 @@
     animation: none;
     box-shadow: 0 0 5px rgba(243, 244, 246, 0.2), 10px 10px 20px rgba(243, 244, 246, 0.2); /* Matching color for box-shadow */
 }
+
