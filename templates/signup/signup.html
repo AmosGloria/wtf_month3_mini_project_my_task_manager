@@ -5,15 +5,25 @@
         <span data-import="components\input\input.html">         
           </span>
         <label for=""class="form__label">Enter your Email</label>
-        <span data-import="components\input\input.html" data-placeholder="John Doe" class="form__email">
-        </span>
+        <div class="form__email-wrapper">
+          <span data-import="components\input\input.html" data-placeholder="hello@example.com" class="form__email"></span>
+          <img src="assets/public/images/email.svg" alt="email" class="form__email-icon" />
+        </div>
+        <div class="form__password-wrapper">
            <label for="" class="form__label">Password</label>
-        <span data-import="components\input\input.html" class="form__password">         
+        <span data-import="components\input\input.html" data-placeholder="......" class="form__password">         
           </span>
+             <img src="assets/public/images/password.svg" alt="email" class="form__email-icon" />
+        </div>
+          
           <p>password must be at least 6 characters long</p>
           <div class="button">
-             <div data-import="/components/button/button.html" class="button__help" data-text="Help"></div>
-             <div data-import="/components/button/button.html" class="button--create" data-text="Create Account"></div>
+             <div data-import="/components/button/button.html" class="button__help" data-text="Help?"></div>
+              <img src="assets\public\images\circle-question.svg"
+                    alt="circle-question-mark"
+                    class="button__question"
+              />
+             <div data-import="/components/button/button.html" class="button__create" data-text="Create Account"></div>
           </div>
      
 

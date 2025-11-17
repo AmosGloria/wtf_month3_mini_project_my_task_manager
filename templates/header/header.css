@@ -20,9 +20,12 @@
 .header__heading{
     color:var(--black);
     font-size: 30px;
+    position: relative;
+    left: 38px;
 }
 
 .header-login__heading{
     color:var(--black);
     font-size: 30px;
 }
+
