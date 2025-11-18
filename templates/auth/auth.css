@@ -26,6 +26,8 @@
     display: inline-block;
     width: auto;
     height: auto;
+    pointer-events: auto;
+    cursor: pointer;
 }
 
 .auth-login__button ._button,
@@ -42,6 +44,7 @@
     align-items: center;
     width: 400px;
     height: 32px;
+    z-index: 100;
 }
 }
 

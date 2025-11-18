@@ -4,41 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My-Task-Manager</title>
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize/modern-normalize.min.css"/>
     <link rel="stylesheet" href="/assets/css/global.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize/modern-normalize.min.css"/>
+   
 </head>
 <body>
     <main class="main-container">
         <div class="first-bubble-cont">
+            <div
+                class="bubbles"
+                data-import="components\bubbles\bubbles.html">
+                     Bubbles
+            </div>
                 <div
-    class="bubbles"
-        data-import="components\bubbles\bubbles.html">
-        Bubbles
-    </div>
-    <div
-    class="bubbles bubbles--second"
-        data-import="components\bubbles\bubbles.html">
-        Bubbles
-    </div>
-        </div>
+                    class="bubbles bubbles--second"
+                    data-import="components\bubbles\bubbles.html">
+                        Bubbles
+                </div>
+            </div>
 
 
      <div
-    class="bubbles bubbles--third"
+        class="bubbles bubbles--third"
         data-import="components\bubbles\bubbles.html">
-        Bubbles
+            Bubbles
     </div>
 
     <div
-    class="bubbles bubbles--fourth"
+        class="bubbles bubbles--fourth"
         data-import="components\bubbles\bubbles.html">
         Bubbles
     </div>
 
     <span
-    class="bubbles bubbles--fifth"
+        class="bubbles bubbles--fifth"
         data-import="components\bubbles\bubbles.html">
-        Bubbles
+            Bubbles
     </span> 
     <span data-import="components\bubbles\bubbles.html"></span>   
     <img src="assets/public/images/triangle.svg" alt="triangle" class="triangle-decoration" />
@@ -46,8 +47,7 @@
    
     <div data-import="templates/auth/auth.html"></div>
       </main> 
-        
-    <script src="/assets/js/global.js"></script>
+            <script src="/assets/js/global.js"></script>
     
 </body>
 </html>

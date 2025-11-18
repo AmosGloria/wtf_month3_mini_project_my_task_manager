@@ -11,7 +11,6 @@ function loadStyles() {
   document.head.appendChild(link);
 }
 
-
   loadStyles();
 
   const componentElements = document.querySelectorAll('[data-import]');
@@ -34,8 +33,8 @@ function renderComponents(componentElements){
         element.innerHTML = rendered;
         loadComponentScripts(element);
 
-        const getAttributes=element.querySelectorAll('[data-import]');
-        renderComponents(getAttributes)
+        const getAttribute=element.querySelectorAll('[data-import]');
+        renderComponents(getAttribute)
       })
       .catch((err) => {
         console.error(`Error loading component from ${fileImport}:`, err);
@@ -47,13 +46,12 @@ function renderComponents(componentElements){
 renderComponents(componentElements)
 
 function loadComponentScripts(){
-   const components = ['bubbles', 'button', 'card'];
-  const templates = ['header', 'footer', 'auth', 'header', 'footer', 'signup', 'login'];
+  const components = ['bubbles', 'button', 'card', 'input'];
+  const templates = ['header', 'footer', 'auth', 'signup', 'login'];
 
   components.forEach((component) => {
     import(`/components/${component}/${component}.js`)
       .then((module) => {
-        console.log(`${component} component loaded.`);
       })
       .catch((err) => {
         console.error(`Error loading ${component} component:`, err);
@@ -63,13 +61,10 @@ function loadComponentScripts(){
   templates.forEach((template) => {
     import(`/templates/${template}/${template}.js`)
       .then((module) => {
-        console.log(`${template} template loaded.`);
       })
       .catch((err) => {
         console.error(`Error loading ${template} template:`, err);
       });
   });
-
-
 }
  

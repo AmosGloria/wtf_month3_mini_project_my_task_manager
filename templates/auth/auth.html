@@ -2,13 +2,20 @@
 
 <div class="auth">
     <div class="auth__container">
-	<div data-import="templates\header\header.html"></div>
+	    <div data-import="templates/header/header.html"></div>
 
-    <div class="auth-actions">
-        <span data-import="components/button/button.html" data-text="Login" class="auth-login__button" id="login"></span>
-        <span data-import="components/button/button.html" data-text="Signup" class="auth-signup__button" id="signup"></span>
-    </div>
+        <a class="auth-actions">
+           <span data-import="components/button/button.html" data-text="Login" class="auth-login__button" id="login"
+           onclick="clickLogin()"></span>
+           <span data-import="components/button/button.html" 
+                data-text="Signup" 
+                class="auth-signup__button" id="signup"
+                onclick="clickSignup()"
+                ></span>
+        </a>
 	<div data-import="templates/signup/signup.html" class="auth-signup" class="auth-signup__button"></div>
     </div>
-	 <div data-import="templates\footer\footer.html" class="footer"></div>
+	 <div data-import="templates/footer/footer.html" class="footer"></div>
 </div>
+
+<script src="templates\auth\auth.js"></script>
