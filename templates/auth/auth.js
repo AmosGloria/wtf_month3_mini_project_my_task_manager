@@ -1,23 +1,21 @@
-export function initAuth() {
-  const loginBtn = document.getElementById('login');
-  const signupBtn = document.getElementById('signup');
+function initAuth() {
+  const loginBtn = document.getElementById('login-btn');
+  const signupBtn = document.getElementById('signup-btn');
 
-  const loginForm = document.querySelector('.auth-login');
-  const signupForm = document.querySelector('.auth-signup');
+  const loginForm = document.getElementById('login-form');
+  const signupForm = document.getElementById('signup-form');
 
   if (!loginBtn || !signupBtn || !loginForm || !signupForm) {
     console.warn('Auth elements not found');
     return;
   }
 
-  function showLogin(e) {
-    if (e) e.preventDefault();
+  function showLogin() {
     loginForm.style.display = 'block';
     signupForm.style.display = 'none';
   }
 
-  function showSignup(e) {
-    if (e) e.preventDefault();
+  function showSignup() {
     signupForm.style.display = 'block';
     loginForm.style.display = 'none';
   }
@@ -27,3 +25,5 @@ export function initAuth() {
 
   showLogin();
 }
+
+initAuth();

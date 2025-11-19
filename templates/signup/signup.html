@@ -1,20 +1,7 @@
     <link rel="stylesheet" href="/templates/signup/signup.css"/>
 
     <div data-import="components/signupheader/signupheader.html"></div>
-      <div class="auth-actions">
-          <span
-        data-import="components/button/button.html"
-        data-text="Signup"
-        class="auth-signup__button"
-        id="signup"
-      ></span>
-      <span
-        data-import="components/button/button.html"
-        data-text="Login"
-        class="auth-login__button"
-        id="login"
-      ></span>
-    </div>
+   
    <form class="form">
           <label for="" class="form__label">Full Name</label>
         <span data-import="components/input/input.html">         
@@ -24,20 +11,6 @@
           <span data-import="components\input\input.html" data-placeholder="hello@example.com" class="form__email"></span>
           <img src="assets/public/images/email.svg" alt="email" class="form__email-icon" />
         </div>
-        <div class="form__password-wrapper">
-           <label for="" class="form__label">Password</label>
-        <span data-import="components/input/input.html" data-placeholder="......" class="form__password">         
-          </span>
-             <img src="assets/public/images/password.svg" alt="email" class="form__email-icon" />
-        </div>
-          
-          <p>password must be at least 6 characters long</p>
-          <div class="button">
-             <div data-import="/components/button/button.html" class="button__help" data-text="Help?"></div>
-              <img src="assets\public\images\circle-question.svg"
-                    alt="circle-question-mark"
-                    class="button__question"
-              />
-             <div data-import="/components/button/button.html" class="button__create" data-text="Create Account"></div>
-          </div>
+        <div data-import="/components/password/password.html"></div>
     </form>
+ 
