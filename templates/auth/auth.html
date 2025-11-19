@@ -1,19 +1,22 @@
 <link rel="stylesheet" href="templates/auth/auth.css" />
 
 <div class="auth">
-  <div data-import="components/logo/logo.html" class="header__logo auth-login"></div>
+  <div data-import="components/logo/logo.html" class="auth__logo"></div>
     <div class="login__container" id="login-form">
-       <div data-import="components/loginheader/loginheader.html"></div>
+       <div data-import="components/loginheader/loginheader.html" id="auth__login-header"></div>
       <div data-import="templates/login/login.html"></div>
     </div>
 
+    <div>
+ <div data-import="components/signupheader/signupheader.html" id="auth__signup-header"></div>
   <div
     id="signup-form"
     data-import="templates/signup/signup.html">
-      <div data-import="components/signupheader/signupheader.html"></div>
   </div>
+    </div>
 
-  <span
+  <div class="auth__buttons">
+      <span
     data-import="components/button/button.html"
     data-text="Login"
     class="auth-login__button"
@@ -26,10 +29,12 @@
     class="auth-signup__button"
     id="signup-btn">
   </span>
-</div>
-
-<div class="button">
+  </div>
+<div class="auth_help-next-button">
   <div data-import="/components/help/help.html" class="button__help" data-text="Help?"></div>
+  <div data-import="/components/button/button.html" class="button__create" data-text="Next Step"></div>
+</div>
 </div>
 
-<div data-import="/components/button/button.html" class="button__create" data-text="Next Step"></div>
+
+

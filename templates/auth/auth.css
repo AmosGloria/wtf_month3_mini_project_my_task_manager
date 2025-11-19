@@ -22,12 +22,43 @@
     margin-right: 8px;
 }
 
+#auth__signup-header{
+    position: relative;
+    bottom: 140px;
+}
+
+ #auth__signup-header h1{
+    bottom: 38px;
+ }
+
+ #signup-form{
+    position: relative;
+    bottom: 108px;
+ }
+
 .auth-signup__button{
     display: inline-block;
     width: auto;
     height: auto;
     pointer-events: auto;
     cursor: pointer;
+}
+
+.auth__logo{
+    display: flex;
+    justify-content: center;
+}
+
+.login__container h1, p{
+    display: flex;
+    position: relative;
+    bottom: 50px;
+    justify-content: center;
+}
+
+.auth__buttons{
+  position: fixed;
+  bottom: 390px;  
 }
 
 .auth-login__button ._button,
@@ -48,8 +79,21 @@
 }
 }
 
+.auth_help-next-button{
+  display: flex;
+  position: fixed;
+  bottom: 20px;
+  gap: 10px;
+}
+
+.auth_help-next-button img{
+ display: flex;
+  position: fixed;
+  top: 570px;
+} 
 .footer{
     font-size: 14px;
     color: var(--text);
     line-height: 2px;
 }
+
