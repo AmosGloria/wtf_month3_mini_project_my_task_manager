@@ -1,10 +1,25 @@
   <link rel="stylesheet" href="/templates/signup/signup.css"/>
 
-   <h1>Welcome Back!</h1>  
-   <p>Enter your details to access your account</p>
+   <!-- <h1>Welcome Back!</h1>  
+   <p>Enter your details to access your account</p> -->
+   <div data-import="components/loginheader/loginheader.html"></div>
+     <div class="auth-actions">
+          <span
+        data-import="components/button/button.html"
+        data-text="Signup"
+        class="auth-signup__button"
+        id="signup"
+      ></span>
+      <span
+        data-import="components/button/button.html"
+        data-text="Login"
+        class="auth-login__button"
+        id="login"
+      ></span>
+    </div>
     <form class="form">
           <label for="" class="form__label">Full Name</label>
-        <span data-import="components\input\input.html">         
+        <span data-import="components/input/input.html">         
           </span>
         <label for=""class="form__label">Enter your Email</label>
         <div class="form__email-wrapper">
@@ -13,7 +28,7 @@
         </div>
         <div class="form__password-wrapper">
            <label for="" class="form__label">Password</label>
-        <span data-import="components\input\input.html" data-placeholder="......" class="form__password">         
+        <span data-import="components/input/input.html" data-placeholder="......" class="form__password">         
           </span>
              <img src="assets/public/images/password.svg" alt="email" class="form__email-icon" />
         </div>
@@ -27,3 +42,4 @@
              <div data-import="/components/button/button.html" class="button__create" data-text="Create Account"></div>
           </div>     
     </form>
+  

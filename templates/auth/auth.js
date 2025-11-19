@@ -1,30 +1,29 @@
-const loginBtn = document.getElementById('login');
-const signupBtn = document.getElementById('signup');
-
-function clickLogin(e) {
-  e.preventDefault();
+export function initAuth() {
+  const loginBtn = document.getElementById('login');
+  const signupBtn = document.getElementById('signup');
 
   const loginForm = document.querySelector('.auth-login');
   const signupForm = document.querySelector('.auth-signup');
 
-  if (!loginForm || !signupForm) return;
+  if (!loginBtn || !signupBtn || !loginForm || !signupForm) {
+    console.warn('Auth elements not found');
+    return;
+  }
 
-  loginForm.style.display = 'block';
-  signupForm.style.display = 'none';
+  function showLogin(e) {
+    if (e) e.preventDefault();
+    loginForm.style.display = 'block';
+    signupForm.style.display = 'none';
+  }
+
+  function showSignup(e) {
+    if (e) e.preventDefault();
+    signupForm.style.display = 'block';
+    loginForm.style.display = 'none';
+  }
+
+  loginBtn.addEventListener('click', showLogin);
+  signupBtn.addEventListener('click', showSignup);
+
+  showLogin();
 }
-
-function clickSignup(e) {
-  e.preventDefault();
-
-  const loginForm = document.querySelector('.auth-login');
-  const signupForm = document.querySelector('.auth-signup');
-
-  if (!loginForm || !signupForm) return;
-
-  signupForm.style.display = 'block';
-  loginForm.style.display = 'none';
-}
-
-// attach listeners
-if (loginBtn) loginBtn.addEventListener('click', clickLogin);
-if (signupBtn) signupBtn.addEventListener('click', clickSignup);
