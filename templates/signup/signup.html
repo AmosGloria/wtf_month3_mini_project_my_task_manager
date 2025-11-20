@@ -1,12 +1,12 @@
     <link rel="stylesheet" href="/templates/signup/signup.css"/> 
-      
+
    <form class="signup-form">
           <label for="" class="form__label">Full Name</label>
-        <span data-import="components/input/input.html">         
+        <span data-import="components/input/input.html" id="signup-form__name">         
           </span>
-        <label for=""class="form__label">Enter your Email</label>
+        <label for=""class="form__label" id="signup-form__email">Enter your Email</label>
         <div class="form__email-wrapper">
-          <span data-import="components\input\input.html" data-placeholder="hello@example.com" class="form__email"></span>
+          <span data-import="components\input\input.html" data-placeholder="hello@example.com" class="form__email" id="signup-form__password"></span>
           <img src="assets/public/images/email.svg" alt="email" class="form__email-icon" />
         </div>
         <div data-import="/components/password/password.html"></div>
