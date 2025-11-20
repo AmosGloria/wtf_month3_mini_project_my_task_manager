@@ -25,11 +25,16 @@
 #auth__signup-header{
     display: none;
     position: relative;
-    bottom: 140px;
+    bottom: 142px;
 }
 
  #auth__signup-header h1{
     bottom: 38px;
+ }
+
+ #auth__signup-header p{
+top: -44px;
+left: -20px;
  }
 
  #signup-form{
@@ -51,10 +56,19 @@
 }
 
 .login__container h1, p{
-    display: none;
+    display: block;
     position: relative;
     bottom: 50px;
-    justify-content: center;
+    top: 70px;
+    left: 68px;
+}
+
+.login__container p{
+top: 60px;
+}
+
+.login__container h1{
+    left: 102px;
 }
 
 .auth__buttons{
@@ -92,6 +106,17 @@
   position: fixed;
   top: 510px;
 } 
+
+#login-form{
+    position: relative;
+    top: 20px;
+}
+
+#auth__login-header{
+    position: relative;
+    bottom: 180px;
+}
+
 .footer{
     position: fixed;
     top: 610px;

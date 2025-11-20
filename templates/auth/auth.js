@@ -17,7 +17,7 @@ function initAuth() {
     loginForm.style.display = 'block';
     loginHeader.style.display = 'block';
      signupForm.style.display = 'none';
-    signupHeader.style.display = 'block'
+    signupHeader.style.display = 'none'
   }
 
   function showSignup() {
@@ -30,7 +30,7 @@ function initAuth() {
   loginBtn.addEventListener('click', showLogin);
   signupBtn.addEventListener('click', showSignup);
 
-  showLogin();
+  // showLogin();
  
 }
 
