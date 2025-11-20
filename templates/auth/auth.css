@@ -82,18 +82,30 @@
 .auth_help-next-button{
   display: flex;
   position: fixed;
-  bottom: 20px;
+  bottom: 80px;
   gap: 10px;
 }
 
 .auth_help-next-button img{
  display: flex;
   position: fixed;
-  top: 570px;
+  top: 510px;
 } 
 .footer{
+    position: relative;
+    bottom: 36px;
     font-size: 14px;
     color: var(--text);
     line-height: 2px;
+}
+
+.footer span{
+    display: flex;
+    position: relative;
+    bottom: 42px;
+    font-size: 14px;
+    color: var(--text);
+    line-height: 2px;
+    justify-content: center;
 }
 

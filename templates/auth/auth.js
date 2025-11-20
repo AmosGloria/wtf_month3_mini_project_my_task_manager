@@ -32,7 +32,7 @@ function initAuth() {
    signupHeader.style.display = 'block'
    }
     else{
-      signupHeader.style.display = 'none'
+      signupHeader.style.display = 'none';
     }
   }
 

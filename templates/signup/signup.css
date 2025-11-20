@@ -1,9 +1,10 @@
-.form{
+.signup-form{
     width: 400px;
     height: 368px;
     background-color: var(--white);
     bottom: 0;
     position: relative;
+    gap: 40px
 }
 
 .button{
