@@ -23,6 +23,7 @@
 }
 
 #auth__signup-header{
+    display: none;
     position: relative;
     bottom: 140px;
 }
@@ -50,7 +51,7 @@
 }
 
 .login__container h1, p{
-    display: flex;
+    display: none;
     position: relative;
     bottom: 50px;
     justify-content: center;
@@ -82,7 +83,7 @@
 .auth_help-next-button{
   display: flex;
   position: fixed;
-  bottom: 80px;
+  bottom: 70px;
   gap: 10px;
 }
 
@@ -92,8 +93,8 @@
   top: 510px;
 } 
 .footer{
-    position: relative;
-    bottom: 36px;
+    position: fixed;
+    top: 610px;
     font-size: 14px;
     color: var(--text);
     line-height: 2px;
