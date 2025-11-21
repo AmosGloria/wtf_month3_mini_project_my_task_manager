@@ -3,20 +3,14 @@ function PasswordToggle() {
 
   wrappers.forEach((wrapper) => {
     const passwordInput = wrapper.querySelector('input');
-    const lockIcon = wrapper.querySelector('#first-icon');
-    const openIcon = wrapper.querySelector('#secon-icon');
+    const lockIcon = wrapper.querySelector('.first-icon');
+    const openIcon = wrapper.querySelector('.secon-icon');
 
     if (!passwordInput || !lockIcon || !openIcon) return;
 
-    if (!passwordInput.type) {
-      passwordInput.setAttribute('type', 'password');
-    }
-
     function togglePassword() {
       const isHidden = passwordInput.type === 'password';
-
       passwordInput.type = isHidden ? 'text' : 'password';
-
       wrapper.classList.toggle('show-password', isHidden);
     }
 
@@ -25,4 +19,12 @@ function PasswordToggle() {
   });
 }
 
-PasswordToggle();
+const observer = new MutationObserver(() => {
+  const importedInput = document.querySelector('.password-wrapper input');
+  if (importedInput) {
+    PasswordToggle();
+    observer.disconnect();
+  }
+});
+
+observer.observe(document.body, { childList: true, subtree: true });

@@ -38,6 +38,7 @@ left: -20px;
  }
 
  #signup-form{
+    display: none;
     position: relative;
     bottom: 108px;
  }
@@ -108,8 +109,16 @@ top: 60px;
 } 
 
 #login-form{
-    position: relative;
-    top: 20px;
+position: relative;
+top: 30px;
+}
+
+#login-form h1, p{
+    top: 116px;
+}
+
+#login-form p{
+     top: 102px;
 }
 
 #auth__login-header{
@@ -118,16 +127,18 @@ top: 60px;
 }
 
 .footer{
-    position: fixed;
-    top: 610px;
+    top: 460px;
     font-size: 14px;
     color: var(--text);
     line-height: 2px;
 }
 
+.footer p{
+bottom: 420px;
+}
+
 .footer span{
     display: flex;
-    position: relative;
     bottom: 42px;
     font-size: 14px;
     color: var(--text);
