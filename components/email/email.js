@@ -2,7 +2,7 @@ function setupEmailValidation() {
   const emailContainer = document.querySelector('#signup-form__email-input');
   if (!emailContainer) return;
 
-  const emailInput = emailContainer.querySelector('input'); // imported input
+  const emailInput = emailContainer.querySelector('input'); 
   const errorMessage = document.querySelector('.email-error-message');
 
   if (!emailInput) return;
