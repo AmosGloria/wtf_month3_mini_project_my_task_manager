@@ -1,0 +1,21 @@
+.form__email-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.form__email-icon {
+  position: absolute;
+  right: 10px;
+}
+
+.email-error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 4px;
+  display: none;
+}
+
+.email-error {
+  border: 1px solid red !important;
+}

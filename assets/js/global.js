@@ -46,7 +46,7 @@ function renderComponents(componentElements){
 renderComponents(componentElements)
 
 function loadComponentScripts(){
-  const components = ['bubbles', 'button', 'card', 'input', 'password'];
+  const components = ['bubbles', 'button', 'card', 'input', 'password', 'email'];
   const templates = ['footer', 'auth', 'signup', 'login'];
 
   components.forEach((component) => {
