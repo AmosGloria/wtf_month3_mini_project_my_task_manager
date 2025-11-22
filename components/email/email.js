@@ -1,40 +1,34 @@
 function setupEmailValidation() {
-  const emailContainer = document.querySelector('#signup-form__email-input');
-  if (!emailContainer) return;
-
-  const emailInput = emailContainer.querySelector('input'); 
+  const emailInput = document.querySelector('#signup-form__email-input input');
   const errorMessage = document.querySelector('.email-error-message');
 
-  if (!emailInput) return;
+  if (!emailInput || !errorMessage) return;
 
-  function validateEmail() {
+  function validate() {
     const value = emailInput.value.trim();
     const isValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
 
     if (value === "") {
       errorMessage.style.display = "none";
-      emailInput.classList.remove("email-error");
       return;
     }
 
     if (!isValid) {
-      emailInput.classList.add("email-error");
       errorMessage.style.display = "block";
     } else {
-      emailInput.classList.remove("email-error");
       errorMessage.style.display = "none";
     }
   }
 
-  emailInput.addEventListener("input", validateEmail);
+  emailInput.addEventListener("input", validate);
 }
 
-const observer = new MutationObserver(() => {
-  const importedEmailInput = document.querySelector('#signup-form__email-input input');
-  if (importedEmailInput) {
-    setupEmailValidation();
-    observer.disconnect();
-  }
+const emailObserver = new MutationObserver(() => {
+  const inputReady = document.querySelector('#signup-form__email-input input');
+  if (!inputReady) return;
+
+  setupEmailValidation();
+  emailObserver.disconnect();
 });
 
-observer.observe(document.body, { childList: true, subtree: true });
+emailObserver.observe(document.body, { childList: true, subtree: true });

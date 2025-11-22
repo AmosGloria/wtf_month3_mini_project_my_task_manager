@@ -1,61 +1,85 @@
-function submitSignupForm(){
-    const signupFormName = document.getElementById('signup-form__name');
-const signupFormEmail = document.getElementById('signup-form__email');
-const signupFormPassword = document.getElementById('signup-form__password');
+console.log("Signup JS Loaded");
 
-signupFormName.value = '';
-signupFormEmail.value = '';
-signupFormPassword.value = '';
-
-function convertNameToTitleCase() {
-  if (signupFormName.value === '' || !isNaN(signupFormName.value)) {
-    return; 
-  }
-  signupFormName.value = signupFormName.value
-    .split(' ')  
-    .map(word => {
-      return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
-    })
-    .join(' ');  
+function isValidEmail(email) {
+  const v = email.trim().toLowerCase();
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
 }
 
-function isValidEmail() {
-  if (signupFormEmail.value === '') {
-    const emailError = document.createElement('<p>Email</p>');
-    emailError.textContent='email field cannot be empty'
-    emailError.style.display='red';
-  }
+function submitSignupForm() {
+  const nameInput = document.querySelector('#signup-form__name input');
+  const emailInput = document.querySelector('#signup-form__email-input input');
+  const passwordInput = document.querySelector('.password-wrapper input');
 
-  const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-  const userEmail = signupFormEmail.value;
+  if (!nameInput || !emailInput || !passwordInput) return;
 
-  if (emailPattern.test(userEmail)) {
-    console.log("Valid email address");
-  } else {
-    console.log("Invalid email address");
-  }
+  nameInput.addEventListener("input", () => {
+    const value = nameInput.value.trim();
+    if (!value || !isNaN(value)) return;
+
+    nameInput.value = value
+      .split(" ")
+      .map(w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase())
+      .join(" ");
+  });
+
+  document.addEventListener("click", e => {
+    if (
+      e.target.classList.contains("_button") &&
+      e.target.textContent.trim().toLowerCase() === "create account"
+    ) {
+      console.log("Create Account CLICKED!");
+
+      const fullName = nameInput.value.trim();
+      const email = emailInput.value.trim();
+      const password = passwordInput.value.trim();
+
+      console.log("Email extracted:", email);
+
+      if (!fullName) return alert("Full name is required.");
+      if (!isValidEmail(email)) return alert("Invalid email format.");
+      if (password.length < 6) return alert("Password must be at least 6 characters.");
+
+      const signupURL =
+        "https://nvmtqisivhyqyknxitmq.supabase.co/functions/v1/make-server-789385fc/signup";
+
+      fetch(signupURL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ fullName, email, password })
+      })
+        .then(r => r.json().then(data => ({ status: r.status, data })))
+        .then(({ status, data }) => {
+          if (status !== 200) {
+            alert(data.error || "Signup failed");
+            return;
+          }
+
+          alert("Signup successful!");
+          nameInput.value = "";
+          emailInput.value = "";
+          passwordInput.value = "";
+        })
+        .catch(err => {
+          console.error("Network error:", err);
+          alert("Network or server error.");
+        });
+    }
+  });
 }
 
-function isValidPassword(){
-    const userPassword = signupFormPassword.value;  
-    const passwordError =    document.createElement('<p>password error</p>');
-     if (userPassword.value === '') {
-           passwordError.textContent = "Password cannot be empty";
-            passwordError.style.color = "red";
-    return;
+const signupObserver = new MutationObserver(() => {
+  const ready =
+    document.querySelector('#signup-form__name input') &&
+    document.querySelector('#signup-form__email-input input') &&
+    document.querySelector('.password-wrapper input');
 
+  if (ready) {
+    console.log("Inputs detected. Initializing signup.");
+    submitSignupForm();
+    signupObserver.disconnect();
   }
- if(userPassword.length < 6){
-    return 'your password has to be up to 6 characters'
- }
- else if(userPassword.length >= 6){
-    return 'password is valid'
- }
-}
+});
 
-signupFormName.addEventListener('input', convertNameToTitleCase);
-signupFormEmail.addEventListener('input', isValidEmail);
-signupFormPassword.addEventListener('input', isValidPassword); 
+signupObserver.observe(document.body, { childList: true, subtree: true });
 
-fetch()
-}
+console.log("Observer watching…");

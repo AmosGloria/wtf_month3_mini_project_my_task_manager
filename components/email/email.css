@@ -1,21 +1,24 @@
 .form__email-wrapper {
-  position: relative;
-  display: flex;
-  align-items: center;
+    position: relative;
+    width: 100%;
+    display: block;
+}
+
+.form__email-wrapper ._input__field {
+    width: 100%;
+    height: 48px;
+    padding-left: 40px; /* Leaves room for icon */
+    box-sizing: border-box;
+    z-index: 3;
+    position: relative;
 }
 
 .form__email-icon {
-  position: absolute;
-  right: 10px;
-}
-
-.email-error-message {
-  color: red;
-  font-size: 12px;
-  margin-top: 4px;
-  display: none;
-}
-
-.email-error {
-  border: 1px solid red !important;
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    opacity: 0.6;
+    z-index: 1;
 }
