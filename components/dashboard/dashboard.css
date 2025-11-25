@@ -322,4 +322,15 @@ border-radius: 5px;
 
 .dashboard-recents__task{
   display: flex;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  gap:8px;
+  font-size: 16px;
+  font-weight: 400;
+  color: rgb(83, 83, 83);
+}
+
+.checkbox-container{
+  position: relative;
+  top: 60px;
+  left: 220px;
 }
