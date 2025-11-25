@@ -4,6 +4,7 @@
     background-color: #F2F3F4;
     border-bottom: 1px solid #E2E8F0;
     display: flex;
+    position: relative;
 }
 
 
@@ -18,7 +19,6 @@
   font-weight: bold;
   font-family: ui-sans-serif, system-ui, sans-serif;
 }
-
 
 .side-bar{
     background-color: #FFFFFF;
@@ -193,19 +193,22 @@ border-radius: 5px;
   border-radius: 12px;
   background-color: rgb(255, 255, 255);
   background-image: none;
-  box-shadow:
+  border: 2px solid #F9FAFB;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 16px;
+  line-height: normal;
+  font-weight: 400; 
+}
+
+.main-dashboard__container:hover{
+    box-shadow:
     rgba(0, 0, 0, 0) 0px 0px 0px 0px,
     rgba(0, 0, 0, 0) 0px 0px 0px 0px,
     rgba(0, 0, 0, 0) 0px 0px 0px 0px,
     rgba(0, 0, 0, 0) 0px 0px 0px 0px,
     rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
     rgba(0, 0, 0, 0.1) 0px 4px 6px -4px;
-  transform: none;
   transition: box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1);
-  font-family: ui-sans-serif, system-ui, sans-serif;
-  font-size: 16px;
-  line-height: normal;
-  font-weight: 400; 
 }
 
 .main-dashboard__task{
@@ -242,4 +245,81 @@ border-radius: 5px;
   color:rgb(30, 41, 59);
   font-size: 12px;
   font-family: ui-sans-serif, system-ui, sans-serif;
+}
+
+.img-containerA{
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  flex-wrap: nowrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #4743F8;
+}
+
+.img-container1{
+  background-color: #0092B8;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  flex-wrap: nowrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-container2{
+  background-color: #00A63E;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  flex-wrap: nowrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-container3{
+  background-color: #4F39F6;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  flex-wrap: nowrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dashboard-recents{
+  width: 981px;
+  height: 346px;
+  background-color: inherit;
+  position: absolute;
+  top: 260px;
+  left: 304px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.dashboard-recents__first-box{
+  width: 504px;
+  height: 346px;
+  position: static;
+  border-radius: 12px;
+  background-color: #FFFFFF;
+}
+
+.dashboard-recents__second-box{
+  width: 504px;
+  height: 346px;
+  position: static;
+  border-radius: 12px;
+  background-color: #FFFFFF;
+  position: relative;
+}
+
+.dashboard-recents__task{
+  display: flex;
 }
