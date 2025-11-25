@@ -1,10 +1,18 @@
-  <link rel="stylesheet" href="templates/signup/signup.css"/>
+  <link rel="stylesheet" href="components/signup/signup.css"/>
 
   
      <div class="auth-actions"> 
   
     <form class="form" id="login-form">
-       <div data-import="components/email/email.html"></div>
+       <label class="form__label">Enter your Email</label>
+
+<div class="form__email-wrapper">
+  
+  <div 
+    class="form__email"
+    id="signup-form__email-input">
+      <div data-import="/components/input/input.html"></div>
+  </div>
        <div data-import="components/password/password.html"></div>
           </div>          
     </form>
