@@ -330,7 +330,11 @@ border-radius: 5px;
 }
 
 .checkbox-container{
+  font-family: ui-sans-serif, system-ui, sans-serif;
   position: relative;
   top: 60px;
   left: 220px;
+   font-size: 14px;
+  font-weight: 400;
+  color: #a0a3a8;
 }
