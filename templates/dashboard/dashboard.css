@@ -157,7 +157,7 @@ border-radius: 5px;
   display: flex;
   justify-content: space-evenly;
   flex: 1 1 0%;
-  overflow-y: auto;
+  /* overflow-y: auto; */
   padding: 32px;
   position: static;
   z-index: auto;
@@ -330,11 +330,68 @@ border-radius: 5px;
 }
 
 .checkbox-container{
-  font-family: ui-sans-serif, system-ui, sans-serif;
   position: relative;
   top: 60px;
   left: 220px;
-   font-size: 14px;
-  font-weight: 400;
-  color: #a0a3a8;
 }
+
+.dashboard-recents__second-box{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+
+.create-task{
+  display: flex;
+  border: 1px solid rgb(214, 202, 202);
+  border-radius: 5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  flex-shrink: 0;
+  width: 86%;
+  height: auto;
+  padding: 6px 6px;   
+  padding-left: 6px;   
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;           
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none;
+  cursor: pointer;
+}
+
+.create-task p{
+   font-size: 14px;
+  font-weight: 500;
+  line-height: normal;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  color: var(--text);
+  position: relative;
+  top:-8px
+}
+
+.create-task span{
+  color: grey;
+  position: relative;
+  top: -12px;
+}
+
+.create-task:hover{
+  background-color: rgb(6, 182, 212);
+  color:white;
+}
+
+.create-task__image{
+  width: 40px;
+  height: 40px;
+  background-color:rgb(212, 234, 245); 
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
