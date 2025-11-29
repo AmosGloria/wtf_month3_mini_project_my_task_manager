@@ -47,7 +47,7 @@ renderComponents(componentElements)
 
 function loadComponentScripts(){
   const components = ['bubbles', 'button', 'card', 'input', 'password', 'signup'];
-  const templates = ['footer', 'auth', 'login'];
+  const templates = ['footer', 'auth', 'login', 'dashboard'];
 
   components.forEach((component) => {
     import(`/components/${component}/${component}.js`)

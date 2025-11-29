@@ -1,0 +1,80 @@
+
+.side-bar--user-details{
+  border-bottom: 1px solid #E2E8F0;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+}
+
+.side-bar--user-details__user p{
+  color:#7D7292; 
+}
+
+.side-bar__user-details-name{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #3452FA;
+  font-family: ui-sans-serif, system-ui;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.side-bar--user-details__user {
+  display: flex;
+  flex-direction: column; 
+  line-height: 0.05; 
+  margin-left: 10px; 
+  font-size: 14px;
+}
+
+.side-bar--user-details__user p{
+  position: relative;
+  bottom: 10px;
+}
+
+.side-bar--user-details__user h2{
+  position: relative;
+  top:4px
+}
+
+.sidebar__other-details{
+  flex: 1 1 0%;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.side-bar__dashboard{
+  width: 223px;
+  height: 36px;
+  display: inline-flex;
+  align-items:center;
+  white-space:nowrap;
+  gap: 10px;
+  background-color: white;
+  border: none;
+}
+
+.side-bar__dashboard h3{
+  color:#7D7292;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.side-bar__dashboard:hover {
+  background-color: #EEF2FF;
+  color: rgb(139, 139, 248);
+  border-radius: 5px;
+}
+
+.side-bar__dashboard:active{
+background-color: #EEF2FF;
+color: rgb(139, 139, 248);
+font-family: ui-sans-serif, system-ui;
+border-radius: 5px;
+}
