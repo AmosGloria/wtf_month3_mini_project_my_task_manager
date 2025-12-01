@@ -124,7 +124,7 @@ border-radius: 5px;
 
 .main-task{
     width: 1006px;
-    height: 531px;
+    height: 591px;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;  
@@ -174,7 +174,7 @@ align-items: center;
   font-weight: 600;
   font-size: 18px;
   font-family: ui-sans-serif, system-ui, sans-serif;
-    margin-left: 16px;
+  margin-left: 16px;
 }
 
 .main-task__img-description span{
@@ -236,11 +236,58 @@ align-items: center;
 .task-box{
   display: flex;
   justify-content: space-between;
-  margin-top: 26px;
+  position: relative;
+  top: 66px;
+  width: 952px;
+  height: 56px;
+  margin: 0 auto;
 }
 
 .task-details{
   display: flex;
+  width: 189px;
+  height: 56px;
+  gap: 6px;
+}
+
+ .active-tasks{
+  position: relative;
+  top:-40px
+ }
+
+ .active-tasks p{
+font-weight: 600;
+font-size: 30px;
+position: relative;
+left:20px
+}
+
+
+.active-tasks span{
+color:grey;
+font-size: 12px;
+position: relative;
+top:-30px
+}
+
+.complete-task{
+  position: relative;
+  top:-40px
+}
+
+.complete-task p{
+font-weight: 600;
+font-size: 30px;
+color: green;
+position: relative;
+left:20px
+} 
+
+.complete-task span{
+color:grey;
+font-size: 12px;
+position: relative;
+top:-30px
 }
 
 .add-taskbtn{
@@ -268,4 +315,29 @@ align-items: center;
   padding: 8px;
   border: 2px dashed #91b1db;
   margin: 0 auto;
+  position: relative;
+  top:126px
+}
+
+.task-display{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: grey;
+}
+
+.task-display img{
+position: relative;
+top:18px
+}
+
+.task-display :nth-child(2){
+position: relative;
+top:18px
+}
+
+.task-display :nth-child(3){
+  position: relative;
+  top: -10px;
 }
