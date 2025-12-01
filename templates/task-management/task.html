@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="/templates/task-management/task.css"/>
- <div class="main">
+<main class="main">
     <aside class="side-bar">
             <div class="side-bar__task-master">
                  <div class="img-container">
@@ -16,31 +16,45 @@
             </div>
         <div class="side-bar--user-details">
             <div class="side-bar__user-details-name">
-               <h2>G</h2>
+               <h2>
+                  G
+               </h2>
             </div>
-            <div class="side-bar--user-details__user">
-                   <h2>Grace</h2>
-                   <p>grace@gmail.com</p>
-            </div>
+               <div class="side-bar--user-details__user">
+                   <h2>
+                     Grace
+                   </h2>
+                     <p>
+                        grace@gmail.com
+                     </p>
+               </div>
            
         </div>
-            <div class="sidebar__other-details"></div>
-               <button class="side-bar__dashboard">
+            <div class="sidebar__other-details">
+               <button class="side-bar__dashboard" id="dashboardButton">
                   <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path fill="#000" d="M13.5 9V4H20v5zM4 12V4h6.5v8zm9.5 8v-8H20v8zM4 20v-5h6.5v5zm1-9h4.5V5H5zm9.5 8H19v-6h-4.5zm0-11H19V5h-4.5zM5 19h4.5v-3H5zm4.5-3"/>
                    </svg>
-                     <h3>Dashboard</h3>
+                     <h3>
+                        Dashboard
+                     </h3>
                 </button>
                   <button class="side-bar__dashboard" id="task">
                       <img src="/assets/public/images/task.svg" alt="task"/>
-                           <h3>Tasks</h3>
+                           <h3>
+                              Tasks
+                           </h3>
                     </button>
                         <button class="side-bar__dashboard">
                           <img src="/assets/public/images/users.svg" alt="task"/>
-                              <h3>Community</h3>
+                              <h3>
+                                 Community
+                              </h3>
                         </button>
                        <button class="side-bar__dashboard">
                            <img src="/assets/public/images/dollar-sign.svg" alt="task"/>
-                              <h3>Expenses</h3>
+                              <h3>
+                                 Expenses
+                              </h3>
                       </button>
 
                         <button class="side-bar__dashboard">
@@ -49,7 +63,57 @@
                       </button>
                       <button class="side-bar__dashboard">
                            <img src="/assets/public/images/settings.svg" alt="task"/>
-                              <h3>Settings</h3>
+                              <h3>
+                                 Settings
+                              </h3>
                       </button>
+                      </div>
        </aside>
-</div>       
+         <div class="main">
+            <div class="main-task">
+               <div class="main-task__container">
+                  <div class="main-task__img-description">
+                     <div class="main-task__img">
+                        <img src="/assets/public/images/white-check.svg" alt="task"/>
+                     </div>
+                        <div>
+                           <p>Task Management</p>
+                              <span>Manage and track your task</span>
+                        </div>
+                  </div>
+               </div>
+                  <section class="my-task">
+                     <div class="my-task__summary">
+                        <button class="my-task__btn">
+                           <img src="/assets/public/images/black-check.svg" alt="check"/>
+                           My Tasks
+                        </button>
+                           <button class="my-task__summary-btn">
+                              <img src="/assets/public/images/vertical.svg" alt="check"/>
+                              AI Summary
+                           </button>
+                     </div>
+                        <div class="task-box">
+                           <div class="task-details">
+                               <div>
+                              <p>0</p>
+                              <p>Active Tasks</p>
+                           </div>
+                               <div>
+                                 <p>0</p>
+                                    <p>Completed</p>
+                               </div>
+                           </div>                          
+                                 <div>
+                                    <button class="add-taskbtn">
+                                       <img src="/assets/public/images/plus.svg" alt="check"/>Add Task</button>
+                                 </div>
+                        </div>
+                           <div class="task-display"></div>
+                  </section>
+            </div>
+        </div>           
+</main>  
+</div>     
+
+<script src="/templates/task-management/task.js"></script>
