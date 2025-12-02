@@ -1,7 +1,11 @@
-const taskButton = document.getElementById('task');
+document.addEventListener("DOMContentLoaded", () => {
+    const taskButton = document.getElementById('task');
 
-
-taskButton.addEventListener("click", () => {
-    window.location.href = "/templates/task-management/task.html";
+    if (taskButton) {
+        taskButton.addEventListener("click", () => {
+            window.location.href = "/templates/task-management/task.html";
+        });
+    } else {
+        console.error('taskButton element not found!');
+    }
 });
-
